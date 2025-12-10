@@ -1,15 +1,31 @@
-# DSA Solutions
+# 🧠 DSA Solutions
+
+A structured, continuously growing archive of my LeetCode solutions.  
+I recently started using Git, so this repository reflects my cleaner, well-versioned work going forward.
+
+---
 
 ## 🧩 LeetCode Progress
-- 🟢 Easy: 61 solved
-- 🟡 Medium: 26 solved
-- 🔴 Hard: 5 solved
 
-**Total: 92 problems solved on LeetCode**
+- 🟢 Easy: 61 solved  
+- 🟡 Medium: 26 solved  
+- 🔴 Hard: 5 solved  
+
+**⭐ Total: 92 problems solved on LeetCode**
+
+---
 
 ## 📁 Code Uploaded in This Repository
-I started using Git recently, so older solutions aren't pushed yet.
-Now I push *every new problem* as soon as I solve it.
 
-Current uploaded count: 18 solutions
+Not all earlier solutions were pushed (Git came later into the journey).  
+But from this point onward, *every new problem I solve gets committed here* with clean code and meaningful messages.
 
+**📌 Currently uploaded: 18 solutions**
+
+---
+
+## 🚀 Ongoing Goals
+
+- Maintain consistent daily solving    
+- Reach 150 problems solved  
+- Improve code quality and patterns with each commit
