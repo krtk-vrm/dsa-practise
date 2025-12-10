@@ -1,6 +1,6 @@
-/* Version 1: Using temporary array (O(n) space) and putting the elements in a temp array
+/*Version 2: Optimized reverse trick (O(1) space) by reversing the full, and then parts
 TC is O(n)
-SC is O(k)
+SC is O(1)
 */
 class Solution {
 public:
@@ -11,15 +11,8 @@ public:
         k %= n;
         if (k == 0) return;
 
-        vector<int> temp(k);
-
-        for (int i = 0; i < k; i++)
-            temp[i] = nums[n - k + i];
-
-        for (int i = n - 1; i >= k; i--)
-            nums[i] = nums[i - k];
-
-        for (int i = 0; i < k; i++)
-            nums[i] = temp[i];
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k);
+        reverse(nums.begin() + k, nums.end());
     }
 };
