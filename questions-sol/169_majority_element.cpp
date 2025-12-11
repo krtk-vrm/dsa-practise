@@ -1,20 +1,23 @@
-/* Approach - first create a hash table using unordered_map where the key is the nums[i], and the value 
-is its freq. Then i made a second loop to find form the hash table;
+/* Approach - i will assume that the first element is majority, then i will increment count if the next element is also 1
+else i will decrement count. When count is zero, i will move my assumption to that element;
 TC is O(n)
-SC is O(n)
+SC is O(1)
 */
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        unordered_map<long long, int> mp;
-        int n = nums.size();
-        for(int i = 0; i < n ; i++ ){
-            mp[nums[i]]++;
+        int base = 0 , count = 0;
+        for(int x : nums){
+            if(count==0){
+                base = x;
+            }
+            if(x==base){
+                count++;
+            }
+            else{
+                count--;
+            }
         }
-        for(auto i : mp){
-            if(i.second>n/2)return i.first;
-
-        }
-        return 0;
+        return base;
     }
 };
