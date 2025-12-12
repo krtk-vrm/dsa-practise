@@ -1,36 +1,39 @@
-/*Approach - build an array by merging the arrays in out array and then return the median of it;
+/*Approach - reduced the space complexity by instead of making an array, i break count till i reach the middle,
+and then break and return;
 TC is O(m+n)
-SC is O(m+n)
+SC is O(1)
 */
+#pragma GCC optimize("Ofast")
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        vector<double> out;
         int n = nums1.size();
         int m = nums2.size();
-        int p1 = 0, p2 = 0;
-        while(p1<n && p2 < m) {
-            if (nums1[p1] > nums2[p2]) {
-                out.push_back(nums2[p2]);
-                p2++;
+        int total = n+m;
+        int mid1 = (total-1)/2;
+        int mid2 = (total)/2;
+        int count = -1;
+        int i = 0, j = 0;
+        int left = 0 , right = 0;
+        while (i < n || j < m) {
+            int val;
+            if (j == m || (i < n && nums1[i] < nums2[j])) {
+                val = nums1[i];
+                i++;
+            } else {
+                val = nums2[j];
+                j++;
             }
-            else{
-                out.push_back(nums1[p1]);
-                p1++;
+
+            count++;
+
+            if (count == mid1) left = val;
+            if (count == mid2) {
+                right = val;
+                break; 
             }
         }
-        while(p1<n){
-            out.push_back(nums1[p1]);
-            p1++;
-        }
-        while(p2<m){
-            out.push_back(nums2[p2]);
-            p2++;
-        }
-        if ((n + m) % 2 != 0)
-            return out[(n + m) / 2];
-        if ((n + m) % 2 == 0)
-            return 0.5 * out[(n + m) / 2 ] + 0.5 * out[-1 + (n + m) / 2];
-        return 0;
+        if(total%2==0) return (left+right)/2.0;
+        return right;
     }
 };
