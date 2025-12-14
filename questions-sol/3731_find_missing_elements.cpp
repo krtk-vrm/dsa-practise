@@ -1,20 +1,19 @@
-/*Approach - first sort the array, then define the range by start and end. Then find if the elements between those range
-lie in the vector, if not push them to out vector.
-TC - O(nlogn + Range*n)
-SC - O(Range*n)
+/*Approach - first sort the array, then put previous element and current element in two variables and push the elements
+between them in out if exists.
+TC - O(nlogn + Missing)
+SC - O(Missing)
 */
 
 class Solution {
 public:
     vector<int> findMissingElements(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-        int start = nums[0];
-        int n = nums.size();
-        int end = nums[n-1];
         vector<int> out;
-        for(int i = start ; i <= end ; i++){
-            if(find(nums.begin(), nums.end(), i)==nums.end()){
-                out.push_back(i);
+        for(int i = 1 ; i <nums.size() ; i++){
+            int prev = nums[i-1];
+            int cur = nums[i];
+            for(int j = prev+1 ; j < cur ; j++){
+                out.push_back(j);
             }
         }
         return out;
