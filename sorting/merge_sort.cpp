@@ -13,7 +13,7 @@ void merge(vector<int> &arr, int low, int mid, int high)
         }
         else
         {
-            temp.push_back(right);
+            temp.push_back(arr[right]);
             right++;
         }
     }
