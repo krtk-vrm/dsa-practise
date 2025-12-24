@@ -11,7 +11,7 @@ I recently started using Git, so this repository reflects my cleaner, well-versi
 - 🟡 Medium: 33 solved  
 - 🔴 Hard: 7 solved  
 
-**⭐ Total: 110 problems solved on LeetCode**
+**⭐ Total: 112 problems solved on LeetCode**
 
 ---
 
