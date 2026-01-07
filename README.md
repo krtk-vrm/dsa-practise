@@ -8,10 +8,10 @@ I recently started using Git, so this repository reflects my cleaner, well-versi
 ## 🧩 LeetCode Progress
 
 - 🟢 Easy: 80 solved  
-- 🟡 Medium: 44 solved  
+- 🟡 Medium: 48 solved  
 - 🔴 Hard: 9 solved  
 
-**⭐ Total: 133 problems solved on LeetCode**
+**⭐ Total: 137 problems solved on LeetCode**
 
 ---
 
@@ -20,7 +20,7 @@ I recently started using Git, so this repository reflects my cleaner, well-versi
 Not all earlier solutions were pushed (Git came later into the journey).  
 But from this point onward, *every new problem I solve gets committed here* with clean code and meaningful messages.
 
-**📌 Currently uploaded: 55 solutions**
+**📌 Currently uploaded: 59 solutions**
 
 ---
 
