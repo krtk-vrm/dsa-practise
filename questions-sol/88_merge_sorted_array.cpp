@@ -1,4 +1,4 @@
-/*Approach - as the arrays are already sorted and we have to moerge in nums1, i will start from 
+/*Approach - as the arrays are already sorted and we have to merge in nums1, i will start from 
 last element from both arrays and then put it in nums1.
 TC is O(m+n)
 SC is o(1)
