@@ -23,7 +23,6 @@ public:
         low = 0, high = nums.size()-1;
         while(low<=high){
             int mid = low + (high-low)/2;
-            
             int realM = (mid+pivt)%n;
             if(nums[realM]==target)return realM;
             else if(nums[realM]<target)low = mid+1;
