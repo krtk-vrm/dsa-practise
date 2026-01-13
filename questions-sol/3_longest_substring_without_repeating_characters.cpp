@@ -1,21 +1,21 @@
 /*Approach - Sliding window
 TC - O(n)
-SC - O(n)
+SC - O(1)
 */
 #pragma GCC optimize("O3")
 class Solution {
 public:
   int lengthOfLongestSubstring(string s) {
-    unordered_set<char> st;
+    vector<int> lastIndex(128, -1);
+
     int l = 0;
     int maxLen = 0;
 
     for (int r = 0; r < s.size(); r++) {
-      while (st.find(s[r]) != st.end()) {
-        st.erase(s[l]);
-        l++;
+      if (lastIndex[s[r]] >= l) {
+        l = lastIndex[s[r]] + 1;
       }
-      st.insert(s[r]);
+      lastIndex[s[r]] = r;
       maxLen = max(maxLen, r - l + 1);
     }
 
